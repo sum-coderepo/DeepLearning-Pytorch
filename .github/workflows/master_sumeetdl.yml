@@ -17,9 +17,7 @@ jobs:
       
     - name: Install Depenedencies
       run: pip install -r requirements.txt
-    
-    - name: Working directory
-      working-directory: (Build.SourcesDirectory)/FlaskApps/SampleHelloWorld
+      working-directory: $(Build.SourcesDirectory)/FlaskApps/SampleHelloWorld
 
 
     - name: Set up Python version
