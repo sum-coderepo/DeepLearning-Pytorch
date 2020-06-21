@@ -32,6 +32,6 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
-        app-name: './FlaskApps/SampleHelloWorld/app'
+        app-name: 'app'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_b23df291cf244a9fb2c39be7800d05bc }}
