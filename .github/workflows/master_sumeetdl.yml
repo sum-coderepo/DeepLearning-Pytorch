@@ -17,8 +17,11 @@ jobs:
       
     - name: Install Depenedencies
       run: pip install -r requirements.txt
+    
+    - name: Working directory
+      working-directory: (Build.SourcesDirectory)/FlaskApps/SampleHelloWorld
 
-    - working-directory: (Build.SourcesDirectory)/FlaskApps/SampleHelloWorld
+
     - name: Set up Python version
       uses: actions/setup-python@v1
       with:
@@ -32,6 +35,7 @@ jobs:
 
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
+       
     
       with:
         app-name: 'app'
