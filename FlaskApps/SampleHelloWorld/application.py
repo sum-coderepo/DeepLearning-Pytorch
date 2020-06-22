@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Hello World!. This is a home page of first Deep Learning Web API"
+    return "Hello World!. This is a home page of first Deep Learning Web API-1"
 
 # ul_reg = open("multiple_regression_model.pkl", "rb")
 # l_model = joblib.load(mul_reg)
