@@ -16,6 +16,7 @@ jobs:
     - uses: actions/checkout@master
       
     - name: Install Depenedencies
+      working-directory: $(Build.SourcesDirectory)/FlaskApps/SampleHelloWorld/
       run: pip install -r requirements.txt
       
 
