@@ -3,6 +3,11 @@ FROM streamlitcontainerregistry.azurecr.io/ubuntu:latest
 
 WORKDIR /app
 ADD . ./
+RUN set -xe \
+    && apt-get update \
+    && apt-get install python-pip
+RUN pip install --upgrade pip
+
 RUN echo "Hello second" 
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt && rm -rf requirements.txt
 RUN echo "Hello second1" 
