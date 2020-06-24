@@ -1,13 +1,14 @@
 from flask import Flask, render_template, request
-from sklearn.externals import joblib
-import pandas as pd
-import numpy as np
+#from sklearn.externals import joblib
+#import pandas as pd
+#import numpy as np
 
 app = Flask(__name__)
 
+# Comment
 @app.route("/")
 def hello():
-    return "Hello World!. This is a home page of first Deep Learning Web API"
+    return "Hello World!. This is a home page of first Deep Learning Web API-1"
 
 # ul_reg = open("multiple_regression_model.pkl", "rb")
 # l_model = joblib.load(mul_reg)

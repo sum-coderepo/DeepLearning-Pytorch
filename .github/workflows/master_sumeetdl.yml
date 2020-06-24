@@ -17,7 +17,7 @@ jobs:
       
     - name: Install Depenedencies
       working-directory: $(Build.SourcesDirectory)/FlaskApps/SampleHelloWorld/
-      run: pip install -r requirements.txt
+      run: pip install -r $(Build.SourcesDirectory)/FlaskApps/SampleHelloWorld/requirements.txt
       
 
 
