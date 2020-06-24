@@ -1,8 +1,8 @@
 FROM streamlitcontainerregistry.azurecr.io/ubuntu:latest
 
-
+COPY . /app
 WORKDIR /app
-ADD . ./
+#ADD . ./
 
 RUN apt-get update && apt-get install -y \
     software-properties-common
