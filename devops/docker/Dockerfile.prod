@@ -1,4 +1,5 @@
-FROM streamlitcontainerregistry.azurecr.io/hello-world:v1
+FROM streamlitcontainerregistry.azurecr.io/ubuntu:latest
+
 
 WORKDIR /app
 ADD . ./
