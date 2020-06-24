@@ -2,7 +2,7 @@ FROM streamlitcontainerregistry.azurecr.io/hello-world:v1
 
 WORKDIR /app
 ADD . ./
-
+RUN echo "Hello second" 
 RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt && rm -rf requirements.txt
 
 # Default port for Azure Web App for containers is 80
@@ -16,5 +16,4 @@ RUN cp .streamlit/credentials.prod.toml ~/.streamlit/credentials.toml
 RUN cp config.prod.py config.py
 RUN invoke sphinx.copy-from-project-root
 WORKDIR /app
-
 ENTRYPOINT [ "/bin/bash", "./scripts/run_awesome_streamlit_with_ping.sh"]
