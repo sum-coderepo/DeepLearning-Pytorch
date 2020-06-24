@@ -1,4 +1,4 @@
-FROM marcskovmadsen/awesome-streamlit_base:latest
+FROM streamlitcontainerregistry.azurecr.io/hello-world:v1
 
 WORKDIR /app
 ADD . ./
