@@ -12,6 +12,7 @@ RUN apt-get install -y \
     python3-pip
 
 RUN echo "Hello second" 
+COPY requirements.txt ./
 RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r requirements.txt && rm -rf requirements.txt
 RUN echo "Hello second1" 
 # Default port for Azure Web App for containers is 80
