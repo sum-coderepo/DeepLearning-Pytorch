@@ -1,6 +1,6 @@
 FROM streamlitcontainerregistry.azurecr.io/ubuntu:latest
 
-COPY requirements.txt /app
+COPY requirements*.txt /app
 WORKDIR /app
 ADD . ./
 
