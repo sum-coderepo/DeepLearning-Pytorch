@@ -1,11 +1,19 @@
-FROM streamlitcontainerregistry.azurecr.io/hello-world:v1
+FROM streamlitcontainerregistry.azurecr.io/ubuntu:latest
+
 
 WORKDIR /app
 ADD . ./
 
-RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt \
-    && rm -rf requirements.txt
+RUN apt-get update && apt-get install -y \
+    software-properties-common
+RUN add-apt-repository universe
+RUN apt-get install -y \
+    python3.6 \
+    python3-pip
 
+RUN echo "Hello second" 
+RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r requirements.txt && rm -rf requirements.txt
+RUN echo "Hello second1" 
 # Default port for Azure Web App for containers is 80
 # Please note that port and serverPort in the config.toml file
 # should correspond to the exposed port
@@ -17,5 +25,4 @@ RUN cp .streamlit/credentials.prod.toml ~/.streamlit/credentials.toml
 RUN cp config.prod.py config.py
 RUN invoke sphinx.copy-from-project-root
 WORKDIR /app
-
-ENTRYPOINT [ "/bin/bash", "./scripts/run_awesome_streamlit_with_ping.sh"]
+# ENTRYPOINT [ "/bin/bash", "./scripts/run_awesome_streamlit_with_ping.sh"]
