@@ -5,7 +5,7 @@ WORKDIR /app
 ADD . ./
 RUN set -xe \
     && apt-get update \
-    && apt-get install python3-pip
+    && apt-get install -y python3-pip
 RUN pip install --upgrade pip
 
 RUN echo "Hello second" 
