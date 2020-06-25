@@ -21,7 +21,7 @@ RUN echo "Hello second1"
 # Default port for Azure Web App for containers is 80
 # Please note that port and serverPort in the config.toml file
 # should correspond to the exposed port
-EXPOSE 8080
+EXPOSE 80
 
 RUN mkdir ~/.streamlit
 # RUN cp .streamlit/config.prod.toml ~/.streamlit/config.toml
