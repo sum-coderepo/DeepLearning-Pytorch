@@ -6,6 +6,7 @@ ADD . ./
 RUN ls -lsa / 
 RUN ls -lsa /app
 
+RUN pip3 install brew
 RUN brew install freetype
 RUN brew install libpng
 RUN brew link freetype
