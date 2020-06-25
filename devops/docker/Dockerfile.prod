@@ -6,10 +6,6 @@ ADD . ./
 RUN ls -lsa / 
 RUN ls -lsa /app
 
-RUN pip3 install brew
-RUN brew install freetype
-RUN brew install libpng
-RUN brew link freetype
 
 RUN apt-get update && apt-get install -y \
     software-properties-common
@@ -17,6 +13,11 @@ RUN add-apt-repository universe
 RUN apt-get install -y \
     python3.6 \
     python3-pip
+    
+RUN pip3 install brew
+RUN brew install freetype
+RUN brew install libpng
+RUN brew link freetype
 
 RUN echo "Hello second" 
 RUN pip3 install --upgrade pip && pip3 install --no-cache-dir -r docker/requirements.txt && rm -rf docker/requirements.txt
