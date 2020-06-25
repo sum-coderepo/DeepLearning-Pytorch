@@ -6,6 +6,10 @@ ADD . ./
 RUN ls -lsa / 
 RUN ls -lsa /app
 
+RUN brew install freetype
+RUN brew install libpng
+RUN brew link freetype
+
 RUN apt-get update && apt-get install -y \
     software-properties-common
 RUN add-apt-repository universe
