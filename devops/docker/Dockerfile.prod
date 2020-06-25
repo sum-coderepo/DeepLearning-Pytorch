@@ -30,4 +30,5 @@ RUN mkdir ~/.streamlit
 # RUN invoke sphinx.copy-from-project-root
 WORKDIR /app
 RUN ls -lsa /app
+RUN PWD
 ENTRYPOINT [ "/bin/bash", "./scripts/run_awesome_streamlit_with_ping.sh"]
