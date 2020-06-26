@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
 
 
-st.title("Streamlit Example")
+st.title("Streamlit Example 27/06")
 
 st.write("""
 # Explore different classifier
