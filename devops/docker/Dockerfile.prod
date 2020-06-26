@@ -4,7 +4,8 @@ COPY . /app
 WORKDIR /app
 ADD . ./
 RUN ls -lsa / 
-RUN ls -lsa /app
+RUN ls -lsa /app/app.py
+CMD cat /app/app.py
 
 
 RUN apt-get update && apt-get install -y \
