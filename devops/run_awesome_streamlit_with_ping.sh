@@ -4,4 +4,5 @@
 # python "ping_test.py" &
 # top -d 60 -b &
 echo "Invoked Streamlit shell" 
+cat app.py
 streamlit run app.py
