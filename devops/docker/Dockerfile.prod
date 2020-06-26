@@ -24,7 +24,7 @@ RUN echo "Hello second1"
 EXPOSE 80
 
 RUN mkdir ~/.streamlit
-# RUN cp .streamlit/config.prod.toml ~/.streamlit/config.toml
+RUN cp config.toml ~/.streamlit/config.toml
 # RUN cp .streamlit/credentials.prod.toml ~/.streamlit/credentials.toml
 # RUN cp config.prod.py config.py
 # RUN invoke sphinx.copy-from-project-root
