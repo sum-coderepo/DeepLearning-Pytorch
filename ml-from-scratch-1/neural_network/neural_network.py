@@ -3,7 +3,6 @@ Author: Giang Tran
 Email: giangtran240896@gmail.com
 Docs: https://giangtranml.github.io/ml/neural-network.html
 """
-
 import numpy as np
 from nn_components.layers import FCLayer, ActivationLayer, BatchNormLayer, DropoutLayer
 from nn_components.losses import CrossEntropy
