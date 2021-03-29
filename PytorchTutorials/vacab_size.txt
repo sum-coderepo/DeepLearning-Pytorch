@@ -1,0 +1,2 @@
+vocab_size=100159
+num_batches=1789
